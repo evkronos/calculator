@@ -1,0 +1,26 @@
+#container {
+    display: flex;
+    justify-content: center;
+    margin: 8px auto;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+#button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+}
+
+.btn {
+    width: 100px;
+    height: 100px;
+    font-size: large;
+}
+
+#display {
+    width: 400px;
+    height: 100px;
+    border: 1px solid black;
+}
