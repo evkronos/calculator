@@ -15,9 +15,10 @@ function divide(a, b) {
     return a / b;
 }
 
-// let n1 = prompt('Digite o primeiro número')
-// let operator = prompt('Escolha a operação')
-// let n2 = prompt('Digite o segundo número')
+let currentDisplay = ''
+let n1 = null
+let n2 = null
+let operator = null
 
 //selecionar os botões
 const btnUm = document.getElementById('um')
@@ -37,7 +38,13 @@ const divideBtn = document.getElementById('divide-btn')
 const resultBtn = document.getElementById('result-btn')
 const clearBtn = document.getElementById('result-btn')
 
+//selecionar display
+const displayContent = document.getElementById('display-content')
+//selecionar todos os botões pela classe
+const btn = document.querySelectorAll('.digit')
+
 // fazer array para armazenar os botões clicados pelo usuário e exibir no display
+
 
 function operate() {
     switch (operator) {
