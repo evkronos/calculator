@@ -1,37 +1,98 @@
-#container {
+/* Aplicar um estilo básico de reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
     display: flex;
     justify-content: center;
-    margin: 50px auto;
-    flex-wrap: wrap;
-    width: 400px;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
 }
 
-#button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 400px;
+/* Container principal da calculadora */
+.calculadora {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 320px;
 }
 
-.btn {
-    width: 100px;
-    height: 100px;
-    font-size: larger;
-    font-weight: bold;
-}
-
-#display {
-    width: 400px;
-    height: 100px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
+/* Display */
 #display-content {
-    align-self: flex-end;
-    font-size: larger;
-    font-weight: bold;
-    margin: 2px;
+    background-color: #222;
+    color: #fff;
+    text-align: right;
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: 60px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/* Grid de botões */
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Botões padrão */
+button {
+    padding: 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #d4d4d4;
+}
+
+/* Estilo específico para botões de operação */
+#add-btn,
+#subtract-btn,
+#multiply-btn,
+#divide-btn {
+    background-color: #fcb045;
+    color: white;
+}
+
+#add-btn:hover,
+#subtract-btn:hover,
+#multiply-btn:hover,
+#divide-btn:hover {
+    background-color: #f99e11;
+}
+
+/* Botão de igual */
+#result-btn {
+    background-color: #4caf50;
+    color: white;
+    grid-column: span 2;
+}
+
+#result-btn:hover {
+    background-color: #43a047;
+}
+
+/* Botão de limpar */
+#clear-btn {
+    background-color: #f44336;
+    color: white;
+    grid-column: span 2;
+}
+
+#clear-btn:hover {
+    background-color: #e53935;
 }
